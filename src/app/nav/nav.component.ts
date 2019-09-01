@@ -1,4 +1,4 @@
-import { Component, Input ,OnInit } from '@angular/core';
+import { Component, Input , OnInit } from '@angular/core';
 import { HomeComponent } from '../home/home.component';
 
 @Component({
@@ -10,7 +10,7 @@ export class NavComponent implements OnInit {
 
   @Input() homeComponent: HomeComponent;
 
-  navLinks: Object[] = [
+  navLinks: object[] = [
     { name: 'Home', route: '/' },
     { name: 'Projects', route: '/projects' },
     { name: 'Contact', route: '/contact' }

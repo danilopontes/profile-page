@@ -1,8 +1,23 @@
+$break-medium: 1200px;
+$break-small: 800px;
+
 #container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5%;
   grid-template-areas: "academic personal";
+
+  h1 {
+    padding: 5px;
+    border: 2px solid lightgray;
+  }
+
+  @media screen and(max-width: $break-medium) {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
+    grid-template-areas: "academic"
+                         "personal";
+  }
 
   #academic {
     grid-area: academic;
