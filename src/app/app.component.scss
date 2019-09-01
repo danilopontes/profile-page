@@ -1,0 +1,21 @@
+$container-width: 10vw;
+$container-mobile-width: 5vw;
+$break-small: 800px;
+
+header {
+    padding: 10vh $container-width 0 $container-width;
+
+    @media screen and (max-width: $break-small) {
+
+        padding: 0;
+    }
+}
+
+.container {
+    background-color: white;
+    margin: 0 $container-width;
+
+    @media screen and (max-width: $break-small) {
+        margin: 0;
+    }
+}

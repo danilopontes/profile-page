@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    background: url(/assets/background.jpg) no-repeat;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+
+    @media screen and (max-width: 800px) {
+
+        background: white;
+    }
+}
+
+ul {
+
+    padding: 0;
+
+    li {
+        list-style: none;
+    }
+} 
+

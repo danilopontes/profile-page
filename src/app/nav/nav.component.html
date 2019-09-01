@@ -1,0 +1,5 @@
+<nav>
+  <li class="navlinks" *ngFor="let navLink of navLinks">
+    <a routerLink="{{ navLink.route }}">{{ navLink.name }}</a>
+  </li>
+</nav>

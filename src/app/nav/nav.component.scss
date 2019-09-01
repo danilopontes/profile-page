@@ -1,0 +1,44 @@
+
+// VARIABLES
+$main: rgb(45, 61, 131);
+$hover: rgb(103, 135, 241);
+$break-small: 675px;
+
+
+
+nav {
+    
+    border-bottom: 2px solid  rgb(238, 238, 238);
+
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: left;
+
+    @media screen and (max-width: $break-small) {
+        justify-content: center;
+    }
+
+    li.navlinks {
+        background-color: white;
+        @media screen and (max-width: $break-small) {
+            line-height: 2.5em;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        display: inline-block;
+        color: $main;
+        padding: 10px 20px;
+        border-top: 3px solid transparent;
+        transition: ease 0.2s;
+        cursor: pointer;
+
+        &:hover {
+            color: $hover;
+            border-color: $hover;
+        }
+
+    }
+}

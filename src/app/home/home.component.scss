@@ -1,0 +1,129 @@
+$break-medium: 1200px;
+$break-small: 800px;
+$aside-bg: rgba(202, 196, 158, 0.212);
+$aside-bg: #fff; 
+
+main {
+    padding: 30px;
+    display: grid;
+    height: 100%;
+    min-height: 70vh;
+    grid-template-columns: 20vw auto;
+    grid-template-rows:   fit-content(100%);
+    grid-template-areas: "photo title"
+                         "photo detail"
+                         "summary detail";
+
+    @media screen and (max-width: $break-medium) {
+        grid-template-columns: 30vw auto;
+    }
+
+    @media screen and (max-width: $break-small) {
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "title"
+                             "detail"
+                             "photo"
+                             "summary";
+    }
+    
+    
+    #photo {
+        border-top: 1px solid lightgray;
+        border-left: 1px solid lightgray;
+        grid-area: photo;
+        background-color: $aside-bg;
+
+        img {
+            display: block;
+            width: 70%;
+            margin: 10% 15%;
+            margin-right: auto;
+            clip-path: circle(50% at center);
+            @media screen and (max-width: $break-small) {
+                width: 70%;
+                margin: 10% 15%;
+            }
+    
+        }
+    }
+
+    #title {
+        display: flex;
+        grid-area: title;
+        color: white;
+        background-color: rgb(36, 36, 39);
+        padding: 20px 40px;
+        align-items: center;
+
+        h1 {
+             @media screen and (max-width: $break-small) {
+                text-align: center;
+            }
+        }
+
+    }
+
+    #summary {
+        border-left: 1px solid lightgray;
+        border-bottom: 1px solid lightgray;
+        background-color: $aside-bg;
+        display: flex;
+        flex-direction: column;
+        grid-area: summary;
+
+        ul {
+            //padding-left: 15%;
+
+            li, h3 {
+                text-align: center;
+            }
+
+            @media screen and (max-width: $break-small) {
+               padding-left: 0; 
+            }
+        }
+
+        #social-media {
+            display: flex;
+            margin-top: auto;
+            margin-bottom: 10px;
+            align-items: center;
+            justify-content: center;
+
+            a {
+                width: 15%;
+                svg {
+                    pointer-events: none;
+                    height: 100%;
+                    width: 100%;
+                }
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            a#github {
+                margin: 15% 15% 0 25%;
+            }
+
+            a#linkedin {
+                margin: 15% 25% 0 0;
+                svg {
+                    fill: #0077B5;
+                }
+            }
+
+
+        }
+    }
+
+    #detail {
+        border-bottom: 1px solid lightgray;
+        border-right: 1px solid lightgray;
+        padding: 30px;
+        grid-area: detail;
+        text-align: justify;
+    }
+
+}

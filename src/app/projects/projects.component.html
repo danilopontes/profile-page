@@ -1,0 +1,32 @@
+<main id="container">
+  <section id="academic">
+    <h1>Academic</h1>
+
+    <h3 id="banking-system" class="isLink" (click)="showModal($event)">Banking System [Java + Swing]</h3>
+    <p>Banking System application with a dashboard design and many features such as login, logout, add new accounts, deposit and withdraw transactions, list and update accounts based on interest rate and monthly fee.</p>
+
+    <h3 id="nim-game">Nim Game [Java]</h3>
+    <p>Developed the Nim Game during the first term of the program. Game based on command line interface, where players can choose to play against normal or AI computer. </p>
+  </section>
+  <section id="personal">
+    <h1>Personal</h1>
+
+    <h3 id="profile-page" class="isLink"><a href="https://github.com/danilopontes/project-accounting" target="_blank">Profile Page [Angular, Sass]</a></h3>
+    <p>Profile webpage with responsive design utilizing Angular Framework and Sass </p>
+
+    <h3 id="discord-bot" class="isLink"><a href="https://github.com/danilopontes/IBN5100-Discord-Bot" target="_blank">Discord Bot [Nodejs]</a></h3>
+    <p>Discord bot project with the goal to improve even more my skills with Nodejs and also be helpful for me and other classmates including useful commands of task management commands.</p>
+
+    <h3 id="accounting-page" class="isLink"><a href="https://github.com/danilopontes/project-accounting" target="_blank">Accounting Website [Nodejs, Expressjs, MongoDB]</a></h3>
+    <p>Accounting website with responsive design including an user friendly admin panel.</p>
+
+  </section>
+</main>
+
+<div (click)="closeModal()" [style.display]="status" id="modal" class="modal">
+  <div class="modal-content">
+    <img src="{{modalImageURL}}" alt="">
+    <span (click)="closeModal()" class="close">&times;</span>
+  </div>
+
+</div>
