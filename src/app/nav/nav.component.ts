@@ -12,7 +12,7 @@ export class NavComponent implements OnInit {
 
   navLinks: Object[] = [
     { name: 'Home', route: '/' },
-    { name: 'About me', route: '/about' },
+    { name: 'Projects', route: '/projects' },
     { name: 'Contact', route: '/contact' }
   ];
 
