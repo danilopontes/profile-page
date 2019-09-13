@@ -13,7 +13,7 @@ export class ProjectsComponent implements OnInit {
   showModal(event: any): void {
     const elementID = event.target.id;
     if (elementID === 'banking-system') {
-      this.modalImageURL = 'assets/banking-system.jpg';
+      this.modalImageURL = 'assets/banking-system.gif';
     } 
     this.status = 'block';
   }
